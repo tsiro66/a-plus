@@ -1,0 +1,34 @@
+content:
+  - name: projects
+    label: Projects
+    path: src/content/projects
+    type: collection
+    format: json
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: image
+        label: Photo
+        type: image
+        required: true
+      - name: description
+        label: Description
+        type: text
+        required: true
+      - name: dateStart
+        label: Start Date
+        type: date
+        required: true
+      - name: dateEnd
+        label: End Date
+        type: date
+      - name: order
+        label: Order
+        type: number
+        required: true
+
+media:
+  input: src/assets/projects
+  output: /src/assets/projects
