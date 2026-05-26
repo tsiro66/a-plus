@@ -4,6 +4,7 @@ content:
     path: src/content/projects
     type: collection
     format: json
+    filename: "{slug}.json"
     fields:
       - name: title
         label: Title
