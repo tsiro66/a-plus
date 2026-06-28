@@ -11,9 +11,13 @@ interface Props {
 }
 
 const {
-  title = "Professional Site",
-  description = "A high-performance website built with Astro"
+  title = "Αρχική",
+  description = "A+ — Μελέτη, Αδειοδότηση, Κατασκευή. Πολιτικοί μηχανικοί & αρχιτέκτονες."
 } = Astro.props;
+
+const site = Astro.site ?? new URL('https://aplus.gr');
+const canonical = new URL(Astro.url.pathname, site).toString();
+const ogTitle = `A+ | ${title}`;
 ---
 
 <!doctype html>
@@ -24,12 +28,27 @@ const {
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+    <link rel="canonical" href={canonical} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="A+" />
+    <meta property="og:title" content={ogTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content="el_GR" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={ogTitle} />
+    <meta name="twitter:description" content={description} />
+
     <Font cssVariable="--font-geom" />
     <Font cssVariable="--font-google-sans" />
     <Font cssVariable="--font-sansation" />
-    <Font cssVariable="--font-fraunces" />
+    <Font cssVariable="--font-syne" />
     <ClientRouter />
-    <title>{`A37 | ${title}`}</title>
+    <title>{`A+ | ${title}`}</title>
 
   </head>
   <body class="bg-zinc-50 font-geom">

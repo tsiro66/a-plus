@@ -1,9 +1,12 @@
 // @ts-check
 import tailwindcss from '@tailwindcss/vite';
+import sitemap from '@astrojs/sitemap';
 import { defineConfig, fontProviders } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
+    site: 'https://aplus.gr',
+    integrations: [sitemap()],
     vite: {
         plugins: [ tailwindcss()],
     },
@@ -25,10 +28,11 @@ export default defineConfig({
             provider: fontProviders.google(),
         },
         {
-            name: "Fraunces",
-            cssVariable: "--font-fraunces",
+            name: "Syne",
+            cssVariable: "--font-syne",
             provider: fontProviders.google(),
             subsets: ["latin"],
+            weights: [800],
         },
     ],
 });
