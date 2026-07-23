@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://aplus.gr/sitemap-index.xml
+Sitemap: https://a-plus.gr/sitemap-index.xml

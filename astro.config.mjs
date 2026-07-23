@@ -5,7 +5,7 @@ import { defineConfig, fontProviders } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://aplus.gr',
+    site: 'https://a-plus.gr',
     integrations: [sitemap()],
     vite: {
         plugins: [ tailwindcss()],
