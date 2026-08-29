@@ -1,15 +1,15 @@
 ---
 const team = [
   {
-    name: "Όνομα Επώνυμο",
+    name: "Χρυσάφης Αντωνακάκης",
     role: "Πολιτικός Μηχανικός",
-    bio: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore doloremque nemo reprehenderit.",
-    color: "bg-gray-400",
+    bio: "Μελέτη και κατασκευή πλήθους ιδιωτικών έργων υψηλών απαιτήσεων, αλλά και επαγγελματικών χώρων. Εκπόνηση και επίβλεψη εφαρμογής στατικών μελετών κτιρίων όλων των κατηγοριών, αλλά και εξειδικευμένων έργων, όπως οι ενισχύσεις υφιστάμενων κατασκευών, οι μελέτες στατικής επάρκειας και οι στατικές μελέτες μεταλλικών κατασκευών.",
+    color: "bg-forest",
     span: "lg:col-span-3",
   },
   {
     name: "Όνομα Επώνυμο",
-    role: "Αρχιτέκτονας",
+    role: "Πολιτικός Μηχανικός",
     bio: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore doloremque nemo reprehenderit.",
     color: "bg-blue-500",
     span: "lg:col-span-2",
@@ -22,17 +22,18 @@ const team = [
     span: "lg:col-span-2",
   },
   {
-    name: "Όνομα Επώνυμο",
-    role: "Αρχιτέκτονας",
-    bio: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore doloremque nemo reprehenderit.",
-    color: "bg-orange-500",
+    name: "Δέσποινα Τσιρώνη",
+    role: "Αρχιτέκτων Μηχανικός",
+    bio: "Σπούδασε στη Σχολή Αρχιτεκτόνων Μηχανικών του Πανεπιστημίου Πατρών και έλαβε το δίπλωμα το 2007. Έκτοτε απέκτησε μεγάλη εμπειρία στην αρχιτεκτονική μελέτη και επίβλεψη κυρίως κατοικιών και εξωτερικών χώρων/κήπων, καθώς και στην οργάνωση και διαχείριση έργων. Έχει ιδιαίτερο ενδιαφέρον στη μελέτη ιστορικών μνημείων και συνόλων — αρχαίας, ρωμαϊκής, βυζαντινής και νεότερης εποχής — με εργασιακή εμπειρία σε Εφορείες Αρχαιοτήτων ανά την Ελλάδα. Είναι κάτοχος μεταπτυχιακού διπλώματος με αντικείμενο την Προστασία Μνημείων.",
+    interests: "Διάβασμα · Ζωγραφική · Ορειβασία",
+    color: "bg-gray-400",
     span: "lg:col-span-3",
   },
   {
-    name: "Όνομα Επώνυμο",
-    role: "Αρχιτέκτονας",
-    bio: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore doloremque nemo reprehenderit.",
-    color: "bg-green-800",
+    name: "Παναγιώτης Δερμάνης",
+    role: "Πολιτικός Μηχανικός MEng",
+    bio: "Χαρακτηρίζεται από βαθιά εξειδίκευση στην επίβλεψη ιδιωτικών τεχνικών έργων και ιδιαίτερα στην κατασκευή σύγχρονων κτιρίων κατοικιών. Κύριο μέλημα αποτελεί η διασφάλιση της πιστής και ακριβούς εφαρμογής των αρχιτεκτονικών και στατικών μελετών, καθώς και η άρτια οικονομική διαχείριση, η οργάνωση και ο συντονισμός κάθε μορφής εργοταξίου. Στο χαρτοφυλάκιο περιλαμβάνονται, επίσης, ολοκληρωμένες υπηρεσίες ενεργειακών μελετών και επιθεωρήσεων για κτίρια υψηλής ενεργειακής απόδοσης.",
+    color: "bg-orange-500",
     span: "lg:col-span-5",
   },
 ];
@@ -45,12 +46,16 @@ const team = [
     <div class="about-card lg:col-span-2 flex flex-col justify-center">
       <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-black leading-tight">Ποιοι είμαστε</h1>
       <p class="mt-4 text-gray-600 font-google-sans text-base sm:text-lg leading-relaxed">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore doloremque nemo reprehenderit quos harum sapiente.
+        Η A+ ΜΗΧΑΝΙΚΟΙ είναι μια ομάδα έμπειρων πολιτικών μηχανικών και
+        αρχιτεκτόνων, με κοινή προσήλωση στην ποιότητα, την ασφάλεια και τη
+        συνέπεια σε κάθε έργο.
       </p>
     </div>
     <div class="about-card lg:col-span-3 border border-forest/40 p-6 sm:p-8 flex items-center corner-extend">
       <p class="text-forest/80 font-google-sans text-base sm:text-lg leading-relaxed">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, itaque est eum maxime explicabo quos harum sapiente culpa autem voluptatem accusamus doloremque.
+        Από τη μελέτη και την αδειοδότηση έως την επίβλεψη και την κατασκευή,
+        στεκόμαστε δίπλα στον κύριο του έργου σε κάθε στάδιο — με διαφάνεια,
+        τεχνογνωσία και υπευθυνότητα.
       </p>
     </div>
   </div>
@@ -64,6 +69,9 @@ const team = [
           <h3 class="text-lg sm:text-xl font-bold text-black">{member.name}</h3>
           <span class="text-sm text-black/60 font-google-sans mt-1 block">{member.role}</span>
           <p class="mt-3 text-gray-600 text-sm font-google-sans leading-relaxed">{member.bio}</p>
+          {member.interests && (
+            <p class="mt-3 text-xs text-black/50 font-google-sans">Ενδιαφέροντα: {member.interests}</p>
+          )}
         </div>
       </div>
     ))}

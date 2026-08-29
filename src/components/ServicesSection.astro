@@ -1,25 +1,20 @@
 ---
+import RollLink from './RollLink.astro';
+
 const services = [
   {
     number: "01",
-    title: "Μελέτη",
+    title: "Ενισχύσεις",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore doloremque nemo reprehenderit quos harum sapiente culpa autem voluptatem accusamus. Aliquam itaque est eum maxime explicabo.",
-    span: "lg:col-span-2",
-  },
-  {
-    number: "02",
-    title: "Αδειοδότηση",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi at tempora nulla delectus accusantium vero pariatur corporis corrupti asperiores. Officiis voluptatum voluptates quaerat suscipit esse.",
+      "Η A+ ΜΗΧΑΝΙΚΟΙ εξειδικεύεται στις ενισχύσεις φέροντος οργανισμού. Οι ενισχύσεις απαιτούνται λόγω βλαβών φορέα από σεισμική καταπόνηση ή λόγω ανάγκης προσθήκης καθ' ύψος υπάρχουσας οικοδομής. Στη διαστασιολόγηση των ενισχύσεων εφαρμόζεται ο ΚΑΝ.ΕΠΕ. και οι οδηγίες αποκατάστασης βλαβόντων στοιχείων φορέα του ΤΕΕ, εφόσον αναφερόμαστε σε σκελετό με βλάβες από σεισμό.",
     span: "lg:col-span-3",
   },
   {
-    number: "03",
-    title: "Κατασκευή",
+    number: "02",
+    title: "Ανακαινίσεις κατοικιών - Νέες κατασκευές - Οικοδομικές άδειες",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam itaque est eum maxime explicabo quos harum sapiente culpa autem voluptatem accusamus doloremque facilis tempore voluptatibus illum nobis quaerat praesentium.",
-    span: "lg:col-span-5",
+      "Η A+ ΜΗΧΑΝΙΚΟΙ αναλαμβάνει την μελέτη - κατασκευή νέων οικοδομών και την ανακαίνιση/ανακατασκευή κατοικιών. Εκδίδει τις οικοδομικές άδειες που απαιτούνται για το έργο και συνάπτει συμφωνητικά με τον κύριο του έργου.",
+    span: "lg:col-span-2",
   },
 ];
 ---
@@ -31,12 +26,16 @@ const services = [
     <div class="service-card lg:col-span-2 flex flex-col justify-center">
       <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-black leading-tight">Υπηρεσίες</h1>
       <p class="mt-4 text-gray-600 font-google-sans text-base sm:text-lg leading-relaxed">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore doloremque nemo reprehenderit quos harum sapiente.
+        Η A+ ΜΗΧΑΝΙΚΟΙ στελεχώνεται από έμπειρους μηχανικούς και εξειδικεύεται
+        στις ενισχύσεις φέροντος οργανισμού, στη μελέτη και κατασκευή νέων
+        οικοδομών, καθώς και στην ανακαίνιση και ανακατασκευή κατοικιών.
       </p>
     </div>
     <div class="service-card lg:col-span-3 border border-forest/40 p-6 sm:p-8 flex items-center corner-extend">
       <p class="text-forest/80 font-google-sans text-base sm:text-lg leading-relaxed">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, itaque est eum maxime explicabo quos harum sapiente culpa autem voluptatem accusamus doloremque.
+        Αναλαμβάνουμε το έργο σε όλα τα στάδια — από τη μελέτη και την έκδοση
+        των οικοδομικών αδειών έως την κατασκευή και την παράδοση — συνάπτοντας
+        συμφωνητικά με τον κύριο του έργου.
       </p>
     </div>
   </div>
@@ -52,6 +51,33 @@ const services = [
         </div>
       </div>
     ))}
+
+    <!-- Closing statement -->
+    <div class="service-card bg-forest lg:col-span-5 shadow-sm">
+      <div class="p-6 sm:p-8 lg:p-10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
+        <p class="text-white/80 font-google-sans text-base sm:text-lg leading-relaxed max-w-3xl">
+          Εξειδικευόμαστε στον σχεδιασμό και την κατασκευή κατοικιών υψηλών
+          προδιαγραφών από οπλισμένο σκυρόδεμα — με ομάδα έμπειρων μηχανικών
+          δίπλα σας σε κάθε βήμα του έργου.
+        </p>
+        <RollLink
+          href="/contact"
+          text="Συζητήστε το έργο σας"
+          class="group/link gap-2 border border-white/30 hover:border-white/60 text-white font-medium text-sm sm:text-base px-6 py-3 transition-colors duration-300 w-fit shrink-0"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-4 h-4 transition-transform duration-300 group-hover/link:translate-x-2"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            ><path
+              fill-rule="evenodd"
+              d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z"
+              clip-rule="evenodd"></path></svg
+        >
+        </RollLink>
+      </div>
+    </div>
   </div>
 
 </section>
