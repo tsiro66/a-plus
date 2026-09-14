@@ -1,7 +1,7 @@
 {
   "title": "Πρώτο Έργο",
-  "image": "/src/assets/projects/proto-ergo/image.jpg",
-  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sodales scelerisque laoreet. Nam tempor, ipsum eu consectetur rhoncus, dui lacus blandit risus, non pharetra tortor libero vel enim. Vestibulum semper, tortor sit amet volutpat bibendum, elit velit hendrerit sem, at tempus felis velit id metus. Quisque nunc libero, elementum vel malesuada tristique, consequat ac erat. Mauris viverra sodales nisi in pretium. Nullam egestas facilisis quam quis accumsan. Quisque tincidunt lobortis elementum. Vivamus nec dapibus nisl, eu malesuada tellus. Maecenas et sapien dolor. Donec mi enim, malesuada et turpis iaculis, dictum iaculis tortor. Maecenas mauris lectus, suscipit vitae aliquet ac, rhoncus et leo. Mauris quis massa in metus iaculis molestie et nec nunc. Phasellus accumsan velit mattis est commodo semper. ",
+  "image": "/src/assets/projects/Στιγμιότυπο οθόνης 2024-11-07 100629.png",
+  "description": "test",
   "dateStart": "2023-01-15",
   "dateEnd": "2023-06-30",
   "order": 1
