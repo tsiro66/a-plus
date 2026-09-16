@@ -1,271 +1,88 @@
 ---
-import MainLayout from "../layouts/MainLayout.astro";
-import RollLink from "../components/RollLink.astro";
-import { Image } from "astro:assets";
-import { getCollection } from "astro:content";
-import bgImg from "../assets/bg-img.jpg";
-import home from "../content/pages/home.json";
+import { Font } from 'astro:assets';
+import '../styles/global.css';
 
-const allProjects = (await getCollection("projects")).sort(
-  (a, b) => a.data.order - b.data.order
-);
-const latestProjects = allProjects.slice(0, 4);
-
-const images = import.meta.glob<{ default: ImageMetadata }>(
-  "/src/assets/projects/**/*.{jpg,jpeg,png,gif,webp,avif}",
-  { eager: true },
-);
+const email = 'info@a-plus.gr';
 ---
 
-<MainLayout title="Αρχική">
-  <div
-    class="px-8 pb-8 pt-4 md:px-16 md:pb-16 md:pt-8 lg:px-24 lg:pb-24 lg:pt-10 lg:min-h-[calc(100vh-64px)] box-border flex flex-col justify-center"
-  >
-    <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
-      <div
-        class="hero-fade lg:col-span-2 lg:row-span-2 flex flex-col justify-center"
-      >
-        <h1
-          class="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold text-black leading-tight whitespace-pre-line"
-        >
-          {home.heroTitle}
+<!doctype html>
+<html lang="el">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content="A+ ΜΗΧΑΝΙΚΟΙ — η ιστοσελίδα έρχεται σύντομα." />
+    <title>A+ ΜΗΧΑΝΙΚΟΙ — Έρχεται σύντομα</title>
+
+    <Font cssVariable="--font-geom" />
+    <Font cssVariable="--font-google-sans" />
+    <Font cssVariable="--font-sansation" />
+    <Font cssVariable="--font-syne" />
+  </head>
+  <body class="bg-zinc-50 font-geom min-h-screen flex flex-col">
+    <!-- Top bar — logo -->
+    <header class="border-b border-forest/40">
+      <div class="flex items-center px-6 sm:px-10 md:px-16 lg:px-24 h-20">
+        <a href="/" class="flex items-start no-underline">
+          <span class="text-5xl font-bold text-forest leading-none font-sansation">A</span>
+          <span class="text-4xl font-bold text-forest/70 -mt-1 -ml-1 leading-none">+</span>
+        </a>
+        <div class="hidden sm:block h-[1px] w-10 bg-forest/30 mx-6"></div>
+        <span class="hidden sm:block text-xl font-bold text-black tracking-[0.2em] leading-tight uppercase font-geom">
+          Μηχανικοι
+        </span>
+      </div>
+    </header>
+
+    <!-- Center -->
+    <main class="flex-1 flex items-center justify-center px-8">
+      <div class="text-center max-w-2xl">
+        <p class="text-sm text-forest/60 font-google-sans tracking-widest uppercase mb-6">
+          A+ Μηχανικοί
+        </p>
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-black leading-tight mb-6">
+          Έρχεται σύντομα
         </h1>
-        <p
-          class="mt-6 text-base sm:text-lg text-gray-600 font-google-sans leading-relaxed whitespace-pre-line"
-        >
-          {home.heroText}
+        <p class="text-gray-600 font-google-sans text-base sm:text-lg leading-relaxed mb-10">
+          Η ιστοσελίδα της A+ ΜΗΧΑΝΙΚΟΙ βρίσκεται σε εξέλιξη. Μείνετε συντονισμένοι.
         </p>
-        <div class="mt-8 flex flex-wrap gap-4">
-          <RollLink
-            href="/contact"
-            text="Επικοινωνήστε μαζί μας"
-            class="corner-extend group/link gap-2 border border-forest/40 text-forest font-medium text-base sm:text-lg px-8 py-3.5"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-5 h-5 transition-transform duration-300 group-hover/link:translate-x-2"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              ><path
-                fill-rule="evenodd"
-                d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z"
-                clip-rule="evenodd"></path></svg
-            >
-          </RollLink>
-        </div>
-      </div>
-
-      <div
-        class="hero-fade hero-delay-1 lg:col-span-3 lg:row-span-2 min-h-[280px] sm:min-h-[340px] lg:max-h-[450px] overflow-hidden relative group bg-zinc-50"
-      >
-        <Image
-          src={images[home.heroImage]?.default ?? bgImg}
-          alt="A+ project showcase"
-          class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 text-transparent"
-        />
-        <div
-          class="absolute inset-0 bg-forest/10 mix-blend-multiply pointer-events-none"
-        >
-        </div>
-      </div>
-
-      <div
-        class="hero-fade hero-delay-2 lg:col-span-3 bg-zinc-50 border border-forest/40 corner-extend"
-      >
-        <div class="p-8">
-          <h2 class="text-lg sm:text-xl font-bold text-black mb-2">
-            {home.aboutCardTitle}
-          </h2>
-          <p class="text-gray-600 text-sm font-google-sans line-clamp-3 whitespace-pre-line">
-            {home.aboutCardText}
+        <div class="border-t border-forest/30 pt-8 inline-block">
+          <p class="text-sm text-black/60 font-google-sans tracking-widest uppercase mb-2">
+            Επικοινωνία
           </p>
-          <RollLink
-            href="/about"
-            text="Γνωρίστε μας"
-            class="group/link gap-2 text-black font-medium text-sm mt-4 transition-all duration-300"
+          <a
+            href={`mailto:${email}`}
+            class="text-lg sm:text-xl font-medium text-forest hover:text-forest/70 transition-colors no-underline"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 transition-transform duration-300 group-hover/link:translate-x-2"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              ><path
-                fill-rule="evenodd"
-                d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z"
-                clip-rule="evenodd"></path></svg
-            >
-          </RollLink>
+            {email}
+          </a>
         </div>
       </div>
+    </main>
 
-      <div
-        class="hero-fade hero-delay-3 lg:col-span-2 bg-zinc-50 border border-forest/40 corner-extend"
-      >
-        <div class="p-8">
-          <h2 class="text-lg sm:text-xl font-bold text-black mb-2">
-            {home.servicesCardTitle}
-          </h2>
-          <p class="text-gray-600 text-sm font-google-sans line-clamp-3 whitespace-pre-line">
-            {home.servicesCardText}
-          </p>
-          <RollLink
-            href="/services"
-            text="Δείτε τις υπηρεσίες μας"
-            class="group/link gap-2 text-black font-medium text-sm mt-4 transition-all duration-300"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4 transition-transform duration-300 group-hover/link:translate-x-2"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              ><path
-                fill-rule="evenodd"
-                d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z"
-                clip-rule="evenodd"></path></svg
-            >
-          </RollLink>
-        </div>
+    <!-- Bottom -->
+    <footer class="border-t border-forest/40">
+      <div class="flex items-center justify-center px-6 h-14">
+        <p class="text-white/60 text-xs font-google-sans text-forest/50">&copy; 2026 A+ ΜΗΧΑΝΙΚΟΙ</p>
       </div>
-    </div>
-  </div>
+    </footer>
+  </body>
+</html>
 
-  <section class="px-8 md:px-16 lg:px-24 py-24">
-    <div
-      class="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-16 gap-4"
-    >
-      <div>
-        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-black">
-          {home.workTitle}
-        </h2>
-        <p class="mt-3 text-gray-600 font-google-sans max-w-md whitespace-pre-line">
-          {home.workText}
-        </p>
-      </div>
-      <RollLink
-        href="/work"
-        text="Όλα τα έργα"
-        class="group/link gap-2 text-black font-medium transition-all duration-300 shrink-0"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="w-5 h-5 transition-transform duration-300 group-hover/link:translate-x-2"
-          viewBox="0 0 20 20"
-          fill="currentColor"
-          ><path
-            fill-rule="evenodd"
-            d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z"
-            clip-rule="evenodd"></path></svg
-      >
-      </RollLink>
-    </div>
-
-    {latestProjects.length > 0 ? (
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {latestProjects.map((project, index) => {
-          const isFirst = index === 0;
-          const isLast = index === latestProjects.length - 1 && latestProjects.length > 2;
-          const img = images[project.data.photos[0]];
-          return (
-            <a
-              href={`/work/${project.id}`}
-              aria-label={project.data.title}
-              class:list={[
-                "work-item group relative overflow-hidden bg-zinc-50 transition-shadow duration-300 focus-visible:ring-2 focus-visible:ring-forest",
-                isFirst ? "md:row-span-2 min-h-[300px] md:min-h-0" : "min-h-[250px]",
-                isLast ? "lg:col-span-2" : "",
-              ]}
-            >
-              {img && (
-                <Image
-                  src={img.default}
-                  alt=""
-                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 text-transparent"
-                />
-              )}
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-forest/80 via-forest/20 to-transparent opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100 transition-opacity duration-300"
-              />
-              <div
-                class="absolute bottom-0 left-0 right-0 p-8 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:translate-y-0 group-focus-visible:opacity-100 transition-all duration-300"
-              >
-                <h3 class="text-white text-xl font-bold mt-1">{project.data.title}</h3>
-              </div>
-            </a>
-          );
-        })}
-      </div>
-    ) : (
-      <p class="text-gray-500 font-google-sans">{home.noProjectsText}</p>
-    )}
-  </section>
-
-  <style>
-    /* Staggered fade-up entrance */
-    .hero-fade {
+<style>
+  h1,
+  p {
+    animation: fadeUp 0.8s ease-out forwards;
+  }
+  @keyframes fadeUp {
+    from {
       opacity: 0;
-      transform: translateY(24px);
-      animation: heroFadeUp 0.7s ease-out forwards;
+      transform: translateY(16px);
     }
-    .hero-delay-1 {
-      animation-delay: 0.15s;
-    }
-    .hero-delay-2 {
-      animation-delay: 0.3s;
-    }
-    .hero-delay-3 {
-      animation-delay: 0.45s;
-    }
-
-    @keyframes heroFadeUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* Respect reduced-motion: show content immediately, no animation */
-    @media (prefers-reduced-motion: reduce) {
-      .hero-fade {
-        opacity: 1;
-        transform: none;
-        animation: none;
-      }
-      .work-item {
-        opacity: 1;
-        transform: none;
-        transition: none;
-      }
-    }
-
-    /* Scroll-triggered fade for work items */
-    .work-item {
-      opacity: 0;
-      transform: translateY(24px);
-      transition:
-        opacity 0.6s ease-out,
-        transform 0.6s ease-out;
-    }
-    .work-item.visible {
+    to {
       opacity: 1;
       transform: translateY(0);
     }
-  </style>
-
-  <script>
-    document.addEventListener("astro:page-load", () => {
-      const items = document.querySelectorAll(".work-item");
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry, i) => {
-            if (entry.isIntersecting) {
-              setTimeout(() => entry.target.classList.add("visible"), i * 100);
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.15 },
-      );
-      items.forEach((item) => observer.observe(item));
-    });
-  </script>
-</MainLayout>
+  }
+</style>
