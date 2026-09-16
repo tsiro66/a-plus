@@ -121,49 +121,46 @@ content:
         type: text
         required: true
 
-  - name: work
+  - name: projects
     label: Τα έργα μας
-    type: group
-    items:
-      - name: projects
-        label: Έργα
-        type: collection
-        path: src/content/projects
-        format: json
-        filename: "{title}.json"
-        view:
-          primary: title
-          fields: [title, order]
-          sort: [order]
-        fields:
-          - name: title
-            label: Τίτλος έργου
-            type: string
-            required: true
-          - name: description
-            label: Περιγραφή
-            type: text
-            required: true
-          - name: photos
-            label: Φωτογραφίες
-            type: image
-            required: true
-            options:
-              multiple:
-                max: 30
-          - name: dateStart
-            label: Ημερομηνία έναρξης
-            type: date
-            required: true
-          - name: dateEnd
-            label: Ημερομηνία λήξης (κενό = σε εξέλιξη)
-            type: date
-          - name: order
-            label: Σειρά εμφάνισης
-            type: number
-            required: true
-            options:
-              min: 1
+    type: collection
+    label_singular: Έργο
+    path: src/content/projects
+    format: json
+    filename: "{title}.json"
+    view:
+      primary: title
+      fields: [title, order]
+      sort: [order]
+    fields:
+      - name: title
+        label: Τίτλος έργου
+        type: string
+        required: true
+      - name: description
+        label: Περιγραφή
+        type: text
+        required: true
+      - name: photos
+        label: Φωτογραφίες
+        type: image
+        required: true
+        options:
+          multiple:
+            max: 30
+      - name: dateStart
+        label: Ημερομηνία έναρξης
+        type: date
+        required: true
+      - name: dateEnd
+        label: Ημερομηνία λήξης (κενό = σε εξέλιξη)
+        type: date
+      - name: order
+        label: Σειρά εμφάνισης
+        type: number
+        required: true
+        options:
+          min: 1
 
   - name: contact
     label: Επικοινωνία
