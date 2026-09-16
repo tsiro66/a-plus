@@ -1,8 +1,10 @@
 {
   "title": "Πρώτο Έργο",
-  "image": "/src/assets/projects/Στιγμιότυπο οθόνης 2024-11-07 100629.png",
   "description": "test",
   "dateStart": "2023-01-15",
   "dateEnd": "2023-06-30",
-  "order": 1
+  "order": 1,
+  "photos": [
+    "/src/assets/projects/Στιγμιότυπο οθόνης 2024-11-07 100629.png"
+  ]
 }

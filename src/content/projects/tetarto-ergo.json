@@ -1,8 +1,10 @@
 {
   "title": "Τέταρτο Έργο",
-  "image": "/src/assets/projects/tetarto-ergo/image.jpg",
   "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sodales scelerisque laoreet. Nam tempor, ipsum eu consectetur rhoncus, dui lacus blandit risus, non pharetra tortor libero vel enim. Vestibulum semper, tortor sit amet volutpat bibendum, elit velit hendrerit sem, at tempus felis velit id metus. Quisque nunc libero, elementum vel malesuada tristique, consequat ac erat. Mauris viverra sodales nisi in pretium. Nullam egestas facilisis quam quis accumsan. Quisque tincidunt lobortis elementum. Vivamus nec dapibus nisl, eu malesuada tellus. Maecenas et sapien dolor. Donec mi enim, malesuada et turpis iaculis, dictum iaculis tortor. Maecenas mauris lectus, suscipit vitae aliquet ac, rhoncus et leo. Mauris quis massa in metus iaculis molestie et nec nunc. Phasellus accumsan velit mattis est commodo semper. ",
   "dateStart": "2024-02-01",
   "dateEnd": "2024-07-10",
-  "order": 4
+  "order": 4,
+  "photos": [
+    "/src/assets/projects/tetarto-ergo/image.jpg"
+  ]
 }

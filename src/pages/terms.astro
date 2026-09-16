@@ -1,83 +1,21 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-
-const lastUpdated = "Ιούνιος 2026";
+import terms from "../content/pages/terms.json";
 ---
 
-<MainLayout title="Όροι Χρήσης" description="Όροι χρήσης του ιστότοπου A+.">
+<MainLayout title="Όροι Χρήσης">
   <article class="px-8 md:px-16 lg:px-24 py-16 sm:py-24">
     <div class="max-w-3xl mx-auto text-black">
       <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Όροι Χρήσης</h1>
-      <p class="text-sm text-black/50 font-google-sans mb-12">Τελευταία ενημέρωση: {lastUpdated}</p>
+      <p class="text-sm text-black/50 font-google-sans mb-12">Τελευταία ενημέρωση: {terms.lastUpdated}</p>
 
       <div class="space-y-8 text-black/80 font-google-sans leading-relaxed">
-        <section>
-          <h2 class="text-xl font-bold text-black mb-3">1. Γενικά</h2>
-          <p>
-            Η χρήση του ιστότοπου <strong>a-plus.gr</strong> (εφεξής «ο Ιστότοπος»)
-            συνεπάγεται την ανεπιφύλακτη αποδοχή των παρόντων Όρων Χρήσης. Αν
-            διαφωνείτε με οποιονδήποτε όρο, παρακαλούμε να μην χρησιμοποιείτε τον
-            Ιστότοπο.
-          </p>
-        </section>
-
-        <section>
-          <h2 class="text-xl font-bold text-black mb-3">2. Πληροφορίες Ιστότοπου</h2>
-          <p>
-            Ο Ιστότοπος παρέχει πληροφορίες για τις υπηρεσίες και τα έργα του
-            γραφείου. Το περιεχόμενο έχει ενημερωτικό χαρακτήρα και δεν
-            αποτελεί δεσμευτική προσφορά ή σύναψη σύμβασης. Η υποβολή
-            επικοινωνίας δεν δημιουργεί συμβατική σχέση παρά μόνο κατόπιν
-            ρητής γραπτής συμφωνίας των μερών.
-          </p>
-        </section>
-
-        <section>
-          <h2 class="text-xl font-bold text-black mb-3">3. Πνευματική Ιδιοκτησία</h2>
-          <p>
-            Όλο το περιεχόμενο του Ιστότοπου (κειμένων, εικόνων, λογοτύπων,
-            σχεδίασης) ανήκει στους δικαιούχους και προστατεύεται από τις
-            διατάξεις περί πνευματικής ιδιοκτησίας και βιομηχανικής ιδιοκτησίας.
-            Απαγορεύεται η αναπαραγωγή, διανομή, τροποποίηση ή εμπορική
-            εκμετάλλευση χωρίς γραπτή άδεια.
-          </p>
-        </section>
-
-        <section>
-          <h2 class="text-xl font-bold text-black mb-3">4. Ευθύνη</h2>
-          <p>
-            Παρότι καταβάλλεται προσπάθεια για την ακρίβεια του περιεχομένου,
-            δεν εγγυώμαστε την πληρότητα ή την ακρίβεια των πληροφοριών. Ο
-            Ιστότοπος παρέχεται «ως έχει», χωρίς εγγυήσεις. Δεν φέρουμε ευθύνη
-            για τυχόν ζημίες, άμεσες ή έμμεσες, που ενδέχεται να προκύψουν από
-            τη χρήση ή την αδυναμία χρήσης του Ιστότοπου.
-          </p>
-        </section>
-
-        <section>
-          <h2 class="text-xl font-bold text-black mb-3">5. Εξωτερικοί Σύνδεσμοι</h2>
-          <p>
-            Ο Ιστότοπος ενδέχεται να περιέχει συνδέσμους προς ιστοσελίδες
-            τρίτων, για τις οποίες δεν φέρουμε ευθύνη περιεχομένου ή πολιτικής
-            απορρήτου.
-          </p>
-        </section>
-
-        <section>
-          <h2 class="text-xl font-bold text-black mb-3">6. Εφαρμοστέο Δίκαιο</h2>
-          <p>
-            Οι παρόντες Όροι διέπονται από το ελληνικό δίκαιο. Για οποιαδήποτε
-            διαφορά αρμόδια είναι τα δικαστήρια της Αθήνας.
-          </p>
-        </section>
-
-        <section>
-          <h2 class="text-xl font-bold text-black mb-3">7. Επικοινωνία</h2>
-          <p>
-            Για ερωτήματα σχετικά με τους Όρους Χρήσης, επικοινωνήστε στο
-            <a href="mailto:info@a-plus.gr" class="text-forest underline">info@a-plus.gr</a>.
-          </p>
-        </section>
+        {terms.sections.map((section) => (
+          <section>
+            <h2 class="text-xl font-bold text-black mb-3">{section.heading}</h2>
+            <p class="whitespace-pre-line">{section.text}</p>
+          </section>
+        ))}
       </div>
     </div>
   </article>

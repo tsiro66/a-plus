@@ -1,10 +1,11 @@
 ---
 import { Image } from "astro:assets";
+import work from "../content/pages/work.json";
 
 interface Props {
   projects: Array<{
     id: string;
-    data: { title: string; image: string; description: string };
+    data: { title: string; photos: string[] };
   }>;
 }
 const { projects } = Astro.props;
@@ -17,15 +18,15 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 
 <section class="min-h-screen text-black px-8 md:px-16 lg:px-24 py-20">
   <div class="max-w-7xl mx-auto">
-    <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Τα έργα μας</h1>
-    <p class="text-lg text-black/80 max-w-2xl font-google-sans mb-16">
-      Δείτε τα έργα που έχουμε ολοκληρώσει.
+    <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">{work.title}</h1>
+    <p class="text-lg text-black/80 max-w-2xl font-google-sans mb-16 whitespace-pre-line">
+      {work.subtitle}
     </p>
 
     {projects.length > 0 ? (
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project) => {
-          const img = images[project.data.image];
+          const img = images[project.data.photos[0]];
           return (
             <a
               href={`/work/${project.id}`}
@@ -51,9 +52,9 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
           );
         })}
       </div>
-      
+
     ) : (
-      <p class="text-gray-500 font-google-sans">Δεν υπάρχουν έργα ακόμα.</p>
+      <p class="text-gray-500 font-google-sans">{work.noProjectsText}</p>
     )}
   </div>
 </section>

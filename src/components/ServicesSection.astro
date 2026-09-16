@@ -1,22 +1,6 @@
 ---
 import RollLink from './RollLink.astro';
-
-const services = [
-  {
-    number: "01",
-    title: "Ενισχύσεις",
-    description:
-      "Η A+ ΜΗΧΑΝΙΚΟΙ εξειδικεύεται στις ενισχύσεις φέροντος οργανισμού. Οι ενισχύσεις απαιτούνται λόγω βλαβών φορέα από σεισμική καταπόνηση ή λόγω ανάγκης προσθήκης καθ' ύψος υπάρχουσας οικοδομής. Στη διαστασιολόγηση των ενισχύσεων εφαρμόζεται ο ΚΑΝ.ΕΠΕ. και οι οδηγίες αποκατάστασης βλαβόντων στοιχείων φορέα του ΤΕΕ, εφόσον αναφερόμαστε σε σκελετό με βλάβες από σεισμό.",
-    span: "lg:col-span-3",
-  },
-  {
-    number: "02",
-    title: "Ανακαινίσεις κατοικιών - Νέες κατασκευές - Οικοδομικές άδειες",
-    description:
-      "Η A+ ΜΗΧΑΝΙΚΟΙ αναλαμβάνει την μελέτη - κατασκευή νέων οικοδομών και την ανακαίνιση/ανακατασκευή κατοικιών. Εκδίδει τις οικοδομικές άδειες που απαιτούνται για το έργο και συνάπτει συμφωνητικά με τον κύριο του έργου.",
-    span: "lg:col-span-2",
-  },
-];
+import services from '../content/pages/services.json';
 ---
 
 <section class="px-8 md:px-16 lg:px-24 py-16 sm:py-24">
@@ -24,30 +8,26 @@ const services = [
   <!-- Header -->
   <div class="grid grid-cols-1 lg:grid-cols-5 gap-6 mb-12 sm:mb-16">
     <div class="service-card lg:col-span-2 flex flex-col justify-center">
-      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-black leading-tight">Υπηρεσίες</h1>
-      <p class="mt-4 text-gray-600 font-google-sans text-base sm:text-lg leading-relaxed">
-        Η A+ ΜΗΧΑΝΙΚΟΙ στελεχώνεται από έμπειρους μηχανικούς και εξειδικεύεται
-        στις ενισχύσεις φέροντος οργανισμού, στη μελέτη και κατασκευή νέων
-        οικοδομών, καθώς και στην ανακαίνιση και ανακατασκευή κατοικιών.
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-black leading-tight">{services.introTitle}</h1>
+      <p class="mt-4 text-gray-600 font-google-sans text-base sm:text-lg leading-relaxed whitespace-pre-line">
+        {services.introText}
       </p>
     </div>
     <div class="service-card lg:col-span-3 border border-forest/40 p-6 sm:p-8 flex items-center corner-extend">
-      <p class="text-forest/80 font-google-sans text-base sm:text-lg leading-relaxed">
-        Αναλαμβάνουμε το έργο σε όλα τα στάδια — από τη μελέτη και την έκδοση
-        των οικοδομικών αδειών έως την κατασκευή και την παράδοση — συνάπτοντας
-        συμφωνητικά με τον κύριο του έργου.
+      <p class="text-forest/80 font-google-sans text-base sm:text-lg leading-relaxed whitespace-pre-line">
+        {services.introQuote}
       </p>
     </div>
   </div>
 
   <!-- Service cards -->
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-    {services.map((service) => (
-      <div class={`service-card bg-zinc-50 border border-forest/40 corner-extend ${service.span}`}>
+    {services.items.map((service, i) => (
+      <div class={`service-card bg-zinc-50 border border-forest/40 corner-extend ${i === 0 ? "lg:col-span-3" : "lg:col-span-2"}`}>
         <div class="p-5 sm:p-6 lg:p-8">
-          <span class="text-sm text-forest/50 font-google-sans tracking-widest">{service.number}</span>
+          <span class="text-sm text-forest/50 font-google-sans tracking-widest">{String(i + 1).padStart(2, "0")}</span>
           <h3 class="text-lg sm:text-xl font-bold text-black mt-2">{service.title}</h3>
-          <p class="mt-3 text-gray-600 text-sm font-google-sans leading-relaxed">{service.description}</p>
+          <p class="mt-3 text-gray-600 text-sm font-google-sans leading-relaxed whitespace-pre-line">{service.description}</p>
         </div>
       </div>
     ))}
@@ -55,14 +35,12 @@ const services = [
     <!-- Closing statement -->
     <div class="service-card bg-forest lg:col-span-5 shadow-sm">
       <div class="p-6 sm:p-8 lg:p-10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
-        <p class="text-white/80 font-google-sans text-base sm:text-lg leading-relaxed max-w-3xl">
-          Εξειδικευόμαστε στον σχεδιασμό και την κατασκευή κατοικιών υψηλών
-          προδιαγραφών από οπλισμένο σκυρόδεμα — με ομάδα έμπειρων μηχανικών
-          δίπλα σας σε κάθε βήμα του έργου.
+        <p class="text-white/80 font-google-sans text-base sm:text-lg leading-relaxed max-w-3xl whitespace-pre-line">
+          {services.closingText}
         </p>
         <RollLink
           href="/contact"
-          text="Συζητήστε το έργο σας"
+          text={services.closingButton}
           class="group/link gap-2 border border-white/30 hover:border-white/60 text-white font-medium text-sm sm:text-base px-6 py-3 transition-colors duration-300 w-fit shrink-0"
         >
           <svg
