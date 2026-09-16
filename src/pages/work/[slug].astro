@@ -2,7 +2,6 @@
 import MainLayout from "../../layouts/MainLayout.astro";
 import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
-import work from "../../content/pages/work.json";
 
 export async function getStaticPaths() {
   const projects = await getCollection("projects");
@@ -31,7 +30,7 @@ const [first, ...rest] = photos;
         href="/work"
         class="text-forest/70 hover:text-forest text-sm font-google-sans mb-8 inline-flex items-center gap-1 transition-colors"
       >
-        &larr; {work.backLink}
+        &larr; Πίσω στα έργα
       </a>
       <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mt-6 mb-8">
         {project.data.title}
@@ -63,7 +62,7 @@ const [first, ...rest] = photos;
           {new Date(project.data.dateStart).toLocaleDateString('el-GR', { month: 'long', year: 'numeric' })}
           {project.data.dateEnd
             ? ` – ${new Date(project.data.dateEnd).toLocaleDateString('el-GR', { month: 'long', year: 'numeric' })}`
-            : ` – ${work.presentText}`}
+            : " – Παρόν"}
         </p>
       )}
       <p class="text-lg text-black/80 font-google-sans leading-relaxed max-w-3xl whitespace-pre-line">

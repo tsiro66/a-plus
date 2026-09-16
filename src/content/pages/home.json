@@ -1,16 +1,12 @@
 {
   "heroTitle": "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
   "heroText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore doloremque nemo reprehenderit.",
-  "heroButton": "Επικοινωνήστε μαζί μας",
   "heroImage": "/src/assets/bg-img.jpg",
   "aboutCardTitle": "Ποιοι είμαστε",
   "aboutCardText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, itaque est eum maxime explicabo quos harum sapiente? Culpa, ex, autem voluptatem, accusamus doloremque facilis tempore voluptatibus illum nobis quaerat praesentium!",
-  "aboutCardButton": "Γνωρίστε μας",
   "servicesCardTitle": "Τι προσφέρουμε",
   "servicesCardText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi at tempora nulla delectus, accusantium vero pariatur corporis corrupti asperiores! Officiis voluptatum voluptates quaerat et, suscipit esse. Laborum voluptas culpa ratione?",
-  "servicesCardButton": "Δείτε τις υπηρεσίες μας",
   "workTitle": "Τα έργα μας",
   "workText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore doloremque.",
-  "workButton": "Όλα τα έργα",
   "noProjectsText": "Δεν υπάρχουν έργα ακόμα."
 }

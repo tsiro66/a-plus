@@ -1,6 +1,5 @@
 ---
 import { Image } from "astro:assets";
-import work from "../content/pages/work.json";
 
 interface Props {
   projects: Array<{
@@ -18,9 +17,9 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 
 <section class="min-h-screen text-black px-8 md:px-16 lg:px-24 py-20">
   <div class="max-w-7xl mx-auto">
-    <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">{work.title}</h1>
-    <p class="text-lg text-black/80 max-w-2xl font-google-sans mb-16 whitespace-pre-line">
-      {work.subtitle}
+    <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Τα έργα μας</h1>
+    <p class="text-lg text-black/80 max-w-2xl font-google-sans mb-16">
+      Δείτε τα έργα που έχουμε ολοκληρώσει.
     </p>
 
     {projects.length > 0 ? (
@@ -54,7 +53,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
       </div>
 
     ) : (
-      <p class="text-gray-500 font-google-sans">{work.noProjectsText}</p>
+      <p class="text-gray-500 font-google-sans">Δεν υπάρχουν έργα ακόμα.</p>
     )}
   </div>
 </section>

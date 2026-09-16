@@ -1,23 +1,43 @@
 {
   "navTitle": "Πλοήγηση",
   "navLinks": [
-    { "label": "Ποιοι είμαστε", "href": "/about" },
-    { "label": "Υπηρεσίες", "href": "/services" },
-    { "label": "Τα έργα μας", "href": "/work" },
-    { "label": "Επικοινωνία", "href": "/contact" }
+    {
+      "label": "Ποιοι είμαστε",
+      "href": "/about"
+    },
+    {
+      "label": "Υπηρεσίες",
+      "href": "/services"
+    },
+    {
+      "label": "Τα έργα μας",
+      "href": "/work"
+    },
+    {
+      "label": "Επικοινωνία",
+      "href": "/contact"
+    }
   ],
   "contactTitle": "Επικοινωνία",
   "email": "info@a-plus.gr",
   "phone": "+30 210 000 0000",
   "location": "Αθήνα, Ελλάδα",
   "social": [
-    { "platform": "facebook", "href": "#" },
-    { "platform": "instagram", "href": "#" },
-    { "platform": "linkedin", "href": "#" }
+    {
+      "platform": "facebook",
+      "href": "#"
+    },
+    {
+      "platform": "instagram",
+      "href": "#"
+    },
+    {
+      "platform": "linkedin",
+      "href": "#"
+    }
   ],
   "ctaTitle": "Ξεκινήστε",
   "ctaText": "Έτοιμοι να συζητήσουμε το επόμενο έργο σας.",
-  "ctaButton": "Επικοινωνήστε μαζί μας",
   "copyright": "© 2026 A+. Με επιφύλαξη παντός δικαιώματος.",
   "privacyLabel": "Πολιτική Απορρήτου",
   "termsLabel": "Όροι Χρήσης"

@@ -1,276 +1,229 @@
 content:
-  - name: pages
-    label: Σελίδες
-    type: group
-    items:
-      - name: home
-        label: Αρχική
-        type: file
-        path: src/content/pages/home.json
-        format: json
-        fields:
-          - name: heroTitle
-            label: Τίτλος κύριας ενότητας
-            type: string
-            required: true
-          - name: heroText
-            label: Κείμενο κύριας ενότητας
-            type: text
-            required: true
-          - name: heroButton
-            label: Κουμπί κύριας ενότητας
-            type: string
-            required: true
-          - name: heroImage
-            label: Φωτογραφία κύριας ενότητας
-            type: image
-            required: true
-          - name: aboutCardTitle
-            label: Τίτλος κάρτας «Ποιοι είμαστε»
-            type: string
-            required: true
-          - name: aboutCardText
-            label: Κείμενο κάρτας «Ποιοι είμαστε»
-            type: text
-            required: true
-          - name: aboutCardButton
-            label: Κουμπί κάρτας «Ποιοι είμαστε»
-            type: string
-            required: true
-          - name: servicesCardTitle
-            label: Τίτλος κάρτας «Τι προσφέρουμε»
-            type: string
-            required: true
-          - name: servicesCardText
-            label: Κείμενο κάρτας «Τι προσφέρουμε»
-            type: text
-            required: true
-          - name: servicesCardButton
-            label: Κουμπί κάρτας «Τι προσφέρουμε»
-            type: string
-            required: true
-          - name: workTitle
-            label: Τίτλος ενότητας έργων
-            type: string
-            required: true
-          - name: workText
-            label: Κείμενο ενότητας έργων
-            type: text
-            required: true
-          - name: workButton
-            label: Κουμπί «Όλα τα έργα»
-            type: string
-            required: true
-          - name: noProjectsText
-            label: Κείμενο όταν δεν υπάρχουν έργα
-            type: string
-            required: true
-
-      - name: about
-        label: Ποιοι είμαστε
-        type: file
-        path: src/content/pages/about.json
-        format: json
-        fields:
-          - name: introTitle
-            label: Τίτλος
-            type: string
-            required: true
-          - name: introText
-            label: Εισαγωγικό κείμενο
-            type: text
-            required: true
-          - name: introQuote
-            label: Κείμενο πράσινης κάρτας
-            type: text
-            required: true
-          - name: team
-            label: Ομάδα
-            type: object
-            list: true
-            fields:
-              - name: name
-                label: Όνομα
-                type: string
-                required: true
-              - name: role
-                label: Ιδιότητα
-                type: string
-                required: true
-              - name: bio
-                label: Βιογραφικό
-                type: text
-                required: true
-              - name: interests
-                label: Ενδιαφέροντα (προαιρετικό)
-                type: string
-
-      - name: services
-        label: Υπηρεσίες
-        type: file
-        path: src/content/pages/services.json
-        format: json
-        fields:
-          - name: introTitle
-            label: Τίτλος
-            type: string
-            required: true
-          - name: introText
-            label: Εισαγωγικό κείμενο
-            type: text
-            required: true
-          - name: introQuote
-            label: Κείμενο κάρτας περιγραφής
-            type: text
-            required: true
-          - name: items
-            label: Υπηρεσίες
-            type: object
-            list: true
-            fields:
-              - name: title
-                label: Τίτλος υπηρεσίας
-                type: string
-                required: true
-              - name: description
-                label: Περιγραφή υπηρεσίας
-                type: text
-                required: true
-          - name: closingText
-            label: Κείμενο πράσινης κάρτας
-            type: text
-            required: true
-          - name: closingButton
-            label: Κουμπί πράσινης κάρτας
-            type: string
-            required: true
-
-      - name: work
-        label: Τα έργα μας
-        type: file
-        path: src/content/pages/work.json
-        format: json
-        fields:
-          - name: title
-            label: Τίτλος σελίδας
-            type: string
-            required: true
-          - name: subtitle
-            label: Υπότιτλος
-            type: string
-            required: true
-          - name: backLink
-            label: Σύνδεσμος επιστροφής
-            type: string
-            required: true
-          - name: presentText
-            label: Κείμενο για έργα σε εξέλιξη
-            type: string
-            required: true
-          - name: noProjectsText
-            label: Κείμενο όταν δεν υπάρχουν έργα
-            type: string
-            required: true
-
-      - name: contact
-        label: Επικοινωνία
-        type: file
-        path: src/content/pages/contact.json
-        format: json
-        fields:
-          - name: introTitle
-            label: Τίτλος
-            type: string
-            required: true
-          - name: introText
-            label: Εισαγωγικό κείμενο
-            type: text
-            required: true
-          - name: introQuote
-            label: Κείμενο πράσινης κάρτας
-            type: text
-            required: true
-          - name: people
-            label: Στοιχεία επικοινωνίας
-            type: object
-            list: true
-            fields:
-              - name: name
-                label: Όνομα
-                type: string
-                required: true
-              - name: role
-                label: Ιδιότητα
-                type: string
-                required: true
-              - name: email
-                label: Email
-                type: string
-                required: true
-              - name: phone
-                label: Τηλέφωνο
-                type: string
-                required: true
-          - name: socialTitle
-            label: Τίτλος social
-            type: string
-            required: true
-          - name: social
-            label: Συνδέσεις social
-            type: object
-            list: true
-            fields:
-              - name: platform
-                label: Πλατφόρμα
-                type: select
-                options:
-                  values:
-                    - name: facebook
-                      label: Facebook
-                    - name: instagram
-                      label: Instagram
-                    - name: linkedin
-                      label: LinkedIn
-
-  - name: projects
-    label: Έργα
-    type: collection
-    path: src/content/projects
+  - name: home
+    label: Αρχική
+    type: file
+    path: src/content/pages/home.json
     format: json
-    filename: "{title}.json"
-    view:
-      primary: title
-      fields: [title, order]
-      sort: [order]
     fields:
-      - name: title
-        label: Τίτλος έργου
+      - name: heroTitle
+        label: Τίτλος κύριας ενότητας
         type: string
         required: true
-      - name: description
-        label: Περιγραφή
+      - name: heroText
+        label: Κείμενο κύριας ενότητας
         type: text
         required: true
-      - name: photos
-        label: Φωτογραφίες
+      - name: heroImage
+        label: Φωτογραφία κύριας ενότητας
         type: image
         required: true
-        options:
-          multiple:
-            max: 30
-      - name: dateStart
-        label: Ημερομηνία έναρξης
-        type: date
+      - name: aboutCardTitle
+        label: Τίτλος κάρτας «Ποιοι είμαστε»
+        type: string
         required: true
-      - name: dateEnd
-        label: Ημερομηνία λήξης (κενό = σε εξέλιξη)
-        type: date
-      - name: order
-        label: Σειρά εμφάνισης
-        type: number
+      - name: aboutCardText
+        label: Κείμενο κάρτας «Ποιοι είμαστε»
+        type: text
         required: true
-        options:
-          min: 1
+      - name: servicesCardTitle
+        label: Τίτλος κάρτας «Τι προσφέρουμε»
+        type: string
+        required: true
+      - name: servicesCardText
+        label: Κείμενο κάρτας «Τι προσφέρουμε»
+        type: text
+        required: true
+      - name: workTitle
+        label: Τίτλος ενότητας έργων
+        type: string
+        required: true
+      - name: workText
+        label: Κείμενο ενότητας έργων
+        type: text
+        required: true
+      - name: noProjectsText
+        label: Κείμενο όταν δεν υπάρχουν έργα
+        type: string
+        required: true
+
+  - name: about
+    label: Ποιοι είμαστε
+    type: file
+    path: src/content/pages/about.json
+    format: json
+    fields:
+      - name: introTitle
+        label: Τίτλος
+        type: string
+        required: true
+      - name: introText
+        label: Εισαγωγικό κείμενο
+        type: text
+        required: true
+      - name: introQuote
+        label: Κείμενο πράσινης κάρτας
+        type: text
+        required: true
+      - name: team
+        label: Ομάδα
+        type: object
+        list: true
+        fields:
+          - name: name
+            label: Όνομα
+            type: string
+            required: true
+          - name: role
+            label: Ιδιότητα
+            type: string
+            required: true
+          - name: bio
+            label: Βιογραφικό
+            type: text
+            required: true
+          - name: interests
+            label: Ενδιαφέροντα (προαιρετικό)
+            type: string
+
+  - name: services
+    label: Υπηρεσίες
+    type: file
+    path: src/content/pages/services.json
+    format: json
+    fields:
+      - name: introTitle
+        label: Τίτλος
+        type: string
+        required: true
+      - name: introText
+        label: Εισαγωγικό κείμενο
+        type: text
+        required: true
+      - name: introQuote
+        label: Κείμενο κάρτας περιγραφής
+        type: text
+        required: true
+      - name: items
+        label: Υπηρεσίες
+        type: object
+        list: true
+        fields:
+          - name: title
+            label: Τίτλος υπηρεσίας
+            type: string
+            required: true
+          - name: description
+            label: Περιγραφή υπηρεσίας
+            type: text
+            required: true
+      - name: closingText
+        label: Κείμενο πράσινης κάρτας
+        type: text
+        required: true
+
+  - name: work
+    label: Τα έργα μας
+    type: group
+    items:
+      - name: projects
+        label: Έργα
+        type: collection
+        path: src/content/projects
+        format: json
+        filename: "{title}.json"
+        view:
+          primary: title
+          fields: [title, order]
+          sort: [order]
+        fields:
+          - name: title
+            label: Τίτλος έργου
+            type: string
+            required: true
+          - name: description
+            label: Περιγραφή
+            type: text
+            required: true
+          - name: photos
+            label: Φωτογραφίες
+            type: image
+            required: true
+            options:
+              multiple:
+                max: 30
+          - name: dateStart
+            label: Ημερομηνία έναρξης
+            type: date
+            required: true
+          - name: dateEnd
+            label: Ημερομηνία λήξης (κενό = σε εξέλιξη)
+            type: date
+          - name: order
+            label: Σειρά εμφάνισης
+            type: number
+            required: true
+            options:
+              min: 1
+
+  - name: contact
+    label: Επικοινωνία
+    type: file
+    path: src/content/pages/contact.json
+    format: json
+    fields:
+      - name: introTitle
+        label: Τίτλος
+        type: string
+        required: true
+      - name: introText
+        label: Εισαγωγικό κείμενο
+        type: text
+        required: true
+      - name: introQuote
+        label: Κείμενο πράσινης κάρτας
+        type: text
+        required: true
+      - name: people
+        label: Στοιχεία επικοινωνίας
+        type: object
+        list: true
+        fields:
+          - name: name
+            label: Όνομα
+            type: string
+            required: true
+          - name: role
+            label: Ιδιότητα
+            type: string
+            required: true
+          - name: email
+            label: Email
+            type: string
+            required: true
+          - name: phone
+            label: Τηλέφωνο
+            type: string
+            required: true
+      - name: socialTitle
+        label: Τίτλος social
+        type: string
+        required: true
+      - name: social
+        label: Συνδέσεις social
+        type: object
+        list: true
+        fields:
+          - name: platform
+            label: Πλατφόρμα
+            type: select
+            options:
+              values:
+                - name: facebook
+                  label: Facebook
+                - name: instagram
+                  label: Instagram
+                - name: linkedin
+                  label: LinkedIn
 
   - name: footer
     label: Υποσέλιδο
@@ -339,10 +292,6 @@ content:
         label: Κείμενο κάρτας εκκίνησης
         type: text
         required: true
-      - name: ctaButton
-        label: Κουμπί κάρτας εκκίνησης
-        type: string
-        required: true
       - name: copyright
         label: Κείμενο πνευματικών δικαιωμάτων
         type: string
@@ -356,78 +305,52 @@ content:
         type: string
         required: true
 
-  - name: legal
-    label: Νομικά κείμενα
-    type: group
-    items:
-      - name: privacy
-        label: Πολιτική Απορρήτου
-        type: file
-        path: src/content/pages/privacy.json
-        format: json
+  - name: privacy
+    label: Πολιτική Απορρήτου
+    type: file
+    path: src/content/pages/privacy.json
+    format: json
+    fields:
+      - name: lastUpdated
+        label: Ημερομηνία τελευταίας ενημέρωσης
+        type: string
+        required: true
+      - name: sections
+        label: Ενότητες
+        type: object
+        list: true
         fields:
-          - name: lastUpdated
-            label: Ημερομηνία τελευταίας ενημέρωσης
-            type: string
-            required: true
-          - name: sections
-            label: Ενότητες
-            type: object
-            list: true
-            fields:
-              - name: heading
-                label: Τίτλος ενότητας
-                type: string
-                required: true
-              - name: text
-                label: Κείμενο ενότητας
-                type: text
-                required: true
-      - name: terms
-        label: Όροι Χρήσης
-        type: file
-        path: src/content/pages/terms.json
-        format: json
-        fields:
-          - name: lastUpdated
-            label: Ημερομηνία τελευταίας ενημέρωσης
-            type: string
-            required: true
-          - name: sections
-            label: Ενότητες
-            type: object
-            list: true
-            fields:
-              - name: heading
-                label: Τίτλος ενότητας
-                type: string
-                required: true
-              - name: text
-                label: Κείμενο ενότητας
-                type: text
-                required: true
-
-      - name: notfound
-        label: Σελίδα 404
-        type: file
-        path: src/content/pages/404.json
-        format: json
-        fields:
-          - name: badge
-            label: Ετικέτα «Σφάλμα»
-            type: string
-            required: true
-          - name: title
-            label: Τίτλος
+          - name: heading
+            label: Τίτλος ενότητας
             type: string
             required: true
           - name: text
-            label: Κείμενο
+            label: Κείμενο ενότητας
             type: text
             required: true
-          - name: button
-            label: Κουμπί επιστροφής
+
+  - name: terms
+    label: Όροι Χρήσης
+    type: file
+    path: src/content/pages/terms.json
+    format: json
+    fields:
+      - name: lastUpdated
+        label: Ημερομηνία τελευταίας ενημέρωσης
+        type: string
+        required: true
+      - name: sections
+        label: Ενότητες
+        type: object
+        list: true
+        fields:
+          - name: heading
+            label: Τίτλος ενότητας
             type: string
+            required: true
+          - name: text
+            label: Κείμενο ενότητας
+            type: text
             required: true
 
 media:

@@ -1,20 +1,19 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import RollLink from "../components/RollLink.astro";
-import notFound from "../content/pages/404.json";
 ---
 
-<MainLayout title="Σελίδα δεν βρέθηκε">
+<MainLayout title="Σελίδα δεν βρέθηκε" description="Η σελίδα που ζητήσατε δεν υπάρχει.">
   <section class="px-8 md:px-16 lg:px-24 py-24 sm:py-32 min-h-[calc(100vh-64px)] flex items-center">
     <div class="max-w-2xl mx-auto text-center text-black">
-      <p class="text-sm text-forest/60 font-google-sans tracking-widest uppercase mb-4">{notFound.badge}</p>
-      <h1 class="text-5xl sm:text-6xl md:text-7xl font-bold mb-6 whitespace-pre-line">{notFound.title}</h1>
-      <p class="text-gray-600 font-google-sans text-base sm:text-lg leading-relaxed mb-10 whitespace-pre-line">
-        {notFound.text}
+      <p class="text-sm text-forest/60 font-google-sans tracking-widest uppercase mb-4">Σφάλμα 404</p>
+      <h1 class="text-5xl sm:text-6xl md:text-7xl font-bold mb-6">Η σελίδα δεν βρέθηκε</h1>
+      <p class="text-gray-600 font-google-sans text-base sm:text-lg leading-relaxed mb-10">
+        Η σελίδα που ζητήσατε μπορεί να έχει μετακινηθεί ή να μην υπάρχει πια.
       </p>
       <RollLink
         href="/"
-        text={notFound.button}
+        text="Επιστροφή στην αρχική"
         class="corner-extend group/link gap-2 border border-forest/40 text-forest font-medium text-base sm:text-lg px-8 py-3.5"
       >
         <svg
