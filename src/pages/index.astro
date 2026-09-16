@@ -21,6 +21,8 @@ const email = 'info@a-plus.gr';
     <Font cssVariable="--font-syne" />
   </head>
   <body class="bg-zinc-50 font-geom min-h-screen flex flex-col">
+    <!-- Vertical line on the side, like the site -->
+    <div class="side-line" aria-hidden="true"></div>
     <!-- Top bar — logo, identical to site navbar -->
     <header class="bg-zinc-50 border-b border-forest/40">
       <div class="flex h-16 items-center overflow-visible">
@@ -100,6 +102,24 @@ const email = 'info@a-plus.gr';
   /* Remove the desktop forest sidebar strip — not part of the coming-soon layout */
   body::before {
     display: none;
+  }
+
+  /* Thin vertical line below the logo column — mirrors the site's main-content line */
+  .side-line {
+    position: fixed;
+    top: 4rem;
+    bottom: 3.5rem;
+    left: var(--nav-logo-w);
+    width: 1px;
+    background-color: var(--color-forest);
+    opacity: 0.4;
+    pointer-events: none;
+    z-index: 1;
+  }
+  @media (max-width: 1023px) {
+    .side-line {
+      display: none;
+    }
   }
 
   h1,
