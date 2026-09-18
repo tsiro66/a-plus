@@ -3,11 +3,11 @@
   "introText": "Είμαστε στη διάθεσή σας για να συζητήσουμε το επόμενο έργο σας. Επικοινωνήστε μαζί μας με τον τρόπο που σας βολεύει.",
   "introQuote": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, itaque est eum maxime explicabo quos harum sapiente culpa autem voluptatem accusamus doloremque.",
   "people": [
-    { "name": "Όνομα Επώνυμο", "role": "Πολιτικός Μηχανικός", "email": "email@a-plus.gr", "phone": "+30 210 000 0000" },
-    { "name": "Όνομα Επώνυμο", "role": "Αρχιτέκτονας", "email": "email@a-plus.gr", "phone": "+30 210 000 0000" },
-    { "name": "Όνομα Επώνυμο", "role": "Αρχιτέκτονας", "email": "email@a-plus.gr", "phone": "+30 210 000 0000" },
-    { "name": "Όνομα Επώνυμο", "role": "Αρχιτέκτονας", "email": "email@a-plus.gr", "phone": "+30 210 000 0000" },
-    { "name": "Όνομα Επώνυμο", "role": "Αρχιτέκτονας", "email": "email@a-plus.gr", "phone": "+30 210 000 0000" }
+    { "name": "Όνομα Επώνυμο", "role": "Πολιτικός Μηχανικός", "email": "aplus.engineers@yahoo.com", "phone": "+30 210 000 0000" },
+    { "name": "Όνομα Επώνυμο", "role": "Αρχιτέκτονας", "email": "aplus.engineers@yahoo.com", "phone": "+30 210 000 0000" },
+    { "name": "Όνομα Επώνυμο", "role": "Αρχιτέκτονας", "email": "aplus.engineers@yahoo.com", "phone": "+30 210 000 0000" },
+    { "name": "Όνομα Επώνυμο", "role": "Αρχιτέκτονας", "email": "aplus.engineers@yahoo.com", "phone": "+30 210 000 0000" },
+    { "name": "Όνομα Επώνυμο", "role": "Αρχιτέκτονας", "email": "aplus.engineers@yahoo.com", "phone": "+30 210 000 0000" }
   ],
   "socialTitle": "Ακολουθήστε μας",
   "social": [
