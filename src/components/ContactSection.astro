@@ -23,11 +23,16 @@ const { social } = contact;
     <div
       class="contact-card lg:col-span-3 bg-forest p-6 sm:p-8 shadow-sm flex items-center"
     >
-      <p
-        class="text-white/80 font-google-sans text-base sm:text-lg leading-relaxed whitespace-pre-line"
-      >
-        {contact.introQuote}
-      </p>
+      <div class="space-y-5">
+        <div>
+          <span class="block text-white/40 text-xs font-google-sans uppercase tracking-widest">Διεύθυνση</span>
+          <p class="mt-1 text-white/80 font-google-sans text-base sm:text-lg">{contact.address}</p>
+        </div>
+        <div>
+          <span class="block text-white/40 text-xs font-google-sans uppercase tracking-widest">Τηλέφωνο</span>
+          <a href={`tel:${contact.phone.startsWith("+") ? contact.phone.replace(/\s+/g, "") : "+30" + contact.phone.replace(/\s+/g, "")}`} class="mt-1 inline-block text-white/80 font-google-sans text-base sm:text-lg hover:text-white transition-colors">{contact.phone}</a>
+        </div>
+      </div>
     </div>
   </div>
 

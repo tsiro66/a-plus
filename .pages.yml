@@ -176,9 +176,13 @@ content:
         label: Εισαγωγικό κείμενο
         type: text
         required: true
-      - name: introQuote
-        label: Κείμενο πράσινης κάρτας
-        type: text
+      - name: address
+        label: Διεύθυνση
+        type: string
+        required: true
+      - name: phone
+        label: Τηλέφωνο
+        type: string
         required: true
       - name: formTitle
         label: Τίτλος φόρμας

@@ -1,7 +1,8 @@
 {
   "introTitle": "Επικοινωνία",
   "introText": "Είμαστε στη διάθεσή σας για να συζητήσουμε το επόμενο έργο σας. Γράψτε μας και θα σας απαντήσουμε το συντομότερο δυνατό.",
-  "introQuote": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, itaque est eum maxime explicabo quos harum sapiente culpa autem voluptatem accusamus doloremque.",
+  "address": "Ακριτών 37, Νέα Ιωνία, ΤΚ 14234",
+  "phone": "211 118 8928",
   "formTitle": "Στείλτε μας μήνυμα",
   "nameLabel": "Όνομα",
   "emailLabel": "Email",
