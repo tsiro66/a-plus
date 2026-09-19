@@ -2,9 +2,7 @@
 import SocialIcon from './SocialIcon.astro';
 import contact from '../content/pages/contact.json';
 
-const { people, social } = contact;
-
-const colors = ["bg-gray-400", "bg-blue-500", "bg-pink-400", "bg-orange-500", "bg-green-800"];
+const { social } = contact;
 ---
 
 <section class="px-8 md:px-16 lg:px-24 py-16 sm:py-24">
@@ -33,21 +31,65 @@ const colors = ["bg-gray-400", "bg-blue-500", "bg-pink-400", "bg-orange-500", "b
     </div>
   </div>
 
-  <!-- Contact grid — each person + social in equal boxes -->
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-    {people.map((person, i) => (
-      <div class="contact-card bg-zinc-50 border border-forest/40 corner-extend">
-        <div class="p-5 sm:p-6 lg:p-8">
-          <div class={`w-11 h-11 ${colors[i % colors.length]} mb-4`}></div>
-          <h3 class="text-lg sm:text-xl font-bold text-black">{person.name}</h3>
-          <span class="text-sm text-black/60 font-google-sans mt-1 block">{person.role}</span>
-          <a href={`mailto:${person.email}`} class="text-sm text-black/60 font-google-sans mt-3 block hover:text-forest transition-colors">{person.email}</a>
-          <a href={`tel:${person.phone.replace(/\s+/g, "")}`} class="text-sm text-black/60 font-google-sans block hover:text-forest transition-colors">{person.phone}</a>
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+    <!-- Contact form -->
+    <div class="contact-card bg-zinc-50 border border-forest/40 corner-extend lg:col-span-2">
+      <div class="p-5 sm:p-6 lg:p-8">
+        <h3 class="text-lg sm:text-xl font-bold text-black">{contact.formTitle}</h3>
+
+        <form id="contact-form" class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-5" novalidate>
+          <!-- Honeypot — hidden from humans, bots fill it -->
+          <input type="text" name="website" id="cf-website" class="absolute opacity-0 h-0 w-0 pointer-events-none" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+          <div class="flex flex-col">
+            <label for="cf-name" class="text-xs uppercase tracking-widest text-black/60 font-google-sans mb-2">{contact.nameLabel} *</label>
+            <input type="text" id="cf-name" name="name" required maxlength="100" autocomplete="name"
+              class="bg-transparent border border-forest/40 px-4 py-3 font-google-sans text-black placeholder-black/40 focus:border-forest focus:outline-none transition-colors" />
+          </div>
+
+          <div class="flex flex-col">
+            <label for="cf-email" class="text-xs uppercase tracking-widest text-black/60 font-google-sans mb-2">{contact.emailLabel} *</label>
+            <input type="email" id="cf-email" name="email" required maxlength="200" autocomplete="email"
+              class="bg-transparent border border-forest/40 px-4 py-3 font-google-sans text-black placeholder-black/40 focus:border-forest focus:outline-none transition-colors" />
+          </div>
+
+          <div class="flex flex-col sm:col-span-2">
+            <label for="cf-phone" class="text-xs uppercase tracking-widest text-black/60 font-google-sans mb-2">{contact.phoneLabel}</label>
+            <input type="tel" id="cf-phone" name="phone" maxlength="40" autocomplete="tel"
+              class="bg-transparent border border-forest/40 px-4 py-3 font-google-sans text-black placeholder-black/40 focus:border-forest focus:outline-none transition-colors" />
+          </div>
+
+          <div class="flex flex-col sm:col-span-2">
+            <label for="cf-message" class="text-xs uppercase tracking-widest text-black/60 font-google-sans mb-2">{contact.messageLabel} *</label>
+            <textarea id="cf-message" name="message" required maxlength="5000" rows="6"
+              class="bg-transparent border border-forest/40 px-4 py-3 font-google-sans text-black placeholder-black/40 focus:border-forest focus:outline-none transition-colors resize-y"></textarea>
+          </div>
+
+          <div class="sm:col-span-2 flex flex-col sm:flex-row sm:items-center gap-4">
+            <button type="submit"
+              class="corner-extend bg-forest text-white font-google-sans px-8 py-3 hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed">
+              {contact.submitLabel}
+            </button>
+            <p id="cf-error" class="hidden text-sm text-red-700 font-google-sans" role="alert">{contact.errorText}</p>
+          </div>
+        </form>
+
+        <!-- Success state — replaces form -->
+        <div id="contact-success" class="hidden mt-6">
+          <div class="border border-forest/40 bg-white p-6 sm:p-8 text-center">
+            <div class="w-11 h-11 bg-forest mx-auto mb-4 flex items-center justify-center" aria-hidden="true">
+              <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="square" stroke-linejoin="miter" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-black">{contact.successTitle}</h3>
+            <p class="mt-2 text-black/60 font-google-sans">{contact.successText}</p>
+          </div>
         </div>
       </div>
-    ))}
+    </div>
 
-    <!-- Social links — same size as a person box -->
+    <!-- Social links -->
     <div class="contact-card bg-forest shadow-sm">
       <div class="p-5 sm:p-6 lg:p-8">
         <div class="w-11 h-10 mb-4 flex items-center">
@@ -89,7 +131,65 @@ const colors = ["bg-gray-400", "bg-blue-500", "bg-pink-400", "bg-orange-500", "b
 </style>
 
 <script>
+  function setupForm() {
+    const form = document.getElementById("contact-form") as HTMLFormElement | null;
+    if (!form || form.dataset.bound) return;
+    form.dataset.bound = "1";
+
+    const success = document.getElementById("contact-success");
+    const error = document.getElementById("cf-error") ?? form.querySelector('[role="alert"]');
+    const button = form.querySelector('button[type="submit"]') as HTMLButtonElement | null;
+    const defaultLabel = button?.textContent ?? "";
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+      if (error) error.classList.add("hidden");
+
+      const fd = new FormData(form);
+      const payload = {
+        website: String(fd.get("website") ?? ""),
+        name: String(fd.get("name") ?? ""),
+        email: String(fd.get("email") ?? ""),
+        phone: String(fd.get("phone") ?? ""),
+        message: String(fd.get("message") ?? ""),
+      };
+
+      if (button) {
+        button.disabled = true;
+        button.textContent = "…";
+      }
+
+      try {
+        const res = await fetch("/api/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        });
+
+        if (res.ok) {
+          form.classList.add("hidden");
+          if (success) success.classList.remove("hidden");
+          return;
+        }
+      } catch {
+        // network error — fall through to error message
+      }
+
+      if (error) error.classList.remove("hidden");
+      if (button) {
+        button.disabled = false;
+        button.textContent = defaultLabel;
+      }
+    });
+  }
+
   document.addEventListener("astro:page-load", () => {
+    setupForm();
+
     const cards = document.querySelectorAll(".contact-card");
     const observer = new IntersectionObserver(
       (entries) => {

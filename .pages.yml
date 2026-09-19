@@ -69,6 +69,24 @@ content:
         type: object
         list: true
         fields:
+          - name: color
+            label: Χρώμα κάρτας
+            type: select
+            required: true
+            options:
+              values:
+                - name: forest
+                  label: Forest (πράσινο σκούρο)
+                - name: blue
+                  label: Μπλε
+                - name: pink
+                  label: Ροζ
+                - name: gray
+                  label: Γκρι
+                - name: orange
+                  label: Πορτοκαλί
+                - name: green
+                  label: Πράσινο
           - name: name
             label: Όνομα
             type: string
@@ -180,27 +198,42 @@ content:
         label: Κείμενο πράσινης κάρτας
         type: text
         required: true
-      - name: people
-        label: Στοιχεία επικοινωνίας
-        type: object
-        list: true
-        fields:
-          - name: name
-            label: Όνομα
-            type: string
-            required: true
-          - name: role
-            label: Ιδιότητα
-            type: string
-            required: true
-          - name: email
-            label: Email
-            type: string
-            required: true
-          - name: phone
-            label: Τηλέφωνο
-            type: string
-            required: true
+      - name: formTitle
+        label: Τίτλος φόρμας
+        type: string
+        required: true
+      - name: nameLabel
+        label: Ετικέτα πεδίου «Όνομα»
+        type: string
+        required: true
+      - name: emailLabel
+        label: Ετικέτα πεδίου «Email»
+        type: string
+        required: true
+      - name: phoneLabel
+        label: Ετικέτα πεδίου «Τηλέφωνο»
+        type: string
+        required: true
+      - name: messageLabel
+        label: Ετικέτα πεδίου «Μήνυμα»
+        type: string
+        required: true
+      - name: submitLabel
+        label: Κείμενο κουμπιού αποστολής
+        type: string
+        required: true
+      - name: successTitle
+        label: Τίτλος επιτυχίας
+        type: string
+        required: true
+      - name: successText
+        label: Κείμενο επιτυχίας
+        type: text
+        required: true
+      - name: errorText
+        label: Κείμενο σφάλματος
+        type: text
+        required: true
       - name: socialTitle
         label: Τίτλος social
         type: string

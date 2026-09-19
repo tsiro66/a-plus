@@ -1,14 +1,16 @@
 {
   "introTitle": "Επικοινωνία",
-  "introText": "Είμαστε στη διάθεσή σας για να συζητήσουμε το επόμενο έργο σας. Επικοινωνήστε μαζί μας με τον τρόπο που σας βολεύει.",
+  "introText": "Είμαστε στη διάθεσή σας για να συζητήσουμε το επόμενο έργο σας. Γράψτε μας και θα σας απαντήσουμε το συντομότερο δυνατό.",
   "introQuote": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, itaque est eum maxime explicabo quos harum sapiente culpa autem voluptatem accusamus doloremque.",
-  "people": [
-    { "name": "Όνομα Επώνυμο", "role": "Πολιτικός Μηχανικός", "email": "aplus.engineers@yahoo.com", "phone": "+30 210 000 0000" },
-    { "name": "Όνομα Επώνυμο", "role": "Αρχιτέκτονας", "email": "aplus.engineers@yahoo.com", "phone": "+30 210 000 0000" },
-    { "name": "Όνομα Επώνυμο", "role": "Αρχιτέκτονας", "email": "aplus.engineers@yahoo.com", "phone": "+30 210 000 0000" },
-    { "name": "Όνομα Επώνυμο", "role": "Αρχιτέκτονας", "email": "aplus.engineers@yahoo.com", "phone": "+30 210 000 0000" },
-    { "name": "Όνομα Επώνυμο", "role": "Αρχιτέκτονας", "email": "aplus.engineers@yahoo.com", "phone": "+30 210 000 0000" }
-  ],
+  "formTitle": "Στείλτε μας μήνυμα",
+  "nameLabel": "Όνομα",
+  "emailLabel": "Email",
+  "phoneLabel": "Τηλέφωνο (προαιρετικό)",
+  "messageLabel": "Μήνυμα",
+  "submitLabel": "Αποστολή",
+  "successTitle": "Το μήνυμά σας στάλθηκε",
+  "successText": "Σας ευχαριστούμε! Θα σας απαντήσουμε το συντομότερο δυνατό.",
+  "errorText": "Κάτι πήγε στραβά. Δοκιμάστε ξανά ή στείλτε μας email στο aplus.engineers@yahoo.com.",
   "socialTitle": "Ακολουθήστε μας",
   "social": [
     { "platform": "facebook", "href": "#" },

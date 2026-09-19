@@ -3,7 +3,7 @@ import about from '../content/pages/about.json';
 
 const team = about.team.map((member, i) => ({
   ...member,
-  color: ["bg-forest", "bg-blue-500", "bg-pink-400", "bg-gray-400", "bg-orange-500"][i % 5],
+  color: { forest: "bg-forest", blue: "bg-blue-500", pink: "bg-pink-400", gray: "bg-gray-400", orange: "bg-orange-500", green: "bg-green-800" }[member.color] ?? "bg-forest",
   span: ["lg:col-span-3", "lg:col-span-2", "lg:col-span-2", "lg:col-span-3", "lg:col-span-5"][i % 5],
 }));
 ---
