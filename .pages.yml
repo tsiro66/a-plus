@@ -84,9 +84,6 @@ content:
             label: Βιογραφικό
             type: text
             required: true
-          - name: interests
-            label: Ενδιαφέροντα (προαιρετικό)
-            type: string
 
   - name: services
     label: Υπηρεσίες

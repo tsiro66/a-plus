@@ -37,9 +37,6 @@ const team = about.team.map((member, i) => ({
           <h3 class="text-lg sm:text-xl font-bold text-black">{member.name}</h3>
           <span class="text-sm text-black/60 font-google-sans mt-1 block">{member.role}</span>
           <p class="mt-3 text-gray-600 text-sm font-google-sans leading-relaxed whitespace-pre-line">{member.bio}</p>
-          {member.interests && (
-            <p class="mt-3 text-xs text-black/50 font-google-sans">Ενδιαφέροντα: {member.interests}</p>
-          )}
         </div>
       </div>
     ))}
