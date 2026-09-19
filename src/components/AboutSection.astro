@@ -1,9 +1,20 @@
 ---
 import about from '../content/pages/about.json';
 
+const COLOR_MAP = {
+  forest: "bg-forest",
+  blue: "bg-blue-500",
+  pink: "bg-pink-400",
+  gray: "bg-gray-400",
+  orange: "bg-orange-500",
+  green: "bg-green-800",
+};
+const HEX_RE = /^#(?:[0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/;
+
 const team = about.team.map((member, i) => ({
   ...member,
-  color: { forest: "bg-forest", blue: "bg-blue-500", pink: "bg-pink-400", gray: "bg-gray-400", orange: "bg-orange-500", green: "bg-green-800" }[member.color] ?? "bg-forest",
+  color: COLOR_MAP[member.color] ?? "bg-forest",
+  customColor: typeof member.colorHex === "string" && HEX_RE.test(member.colorHex) ? member.colorHex : "",
   span: ["lg:col-span-3", "lg:col-span-2", "lg:col-span-2", "lg:col-span-3", "lg:col-span-5"][i % 5],
 }));
 ---
@@ -30,7 +41,7 @@ const team = about.team.map((member, i) => ({
     {team.map((member) => (
       <div class={`about-card bg-zinc-50 border border-forest/40 corner-extend ${member.span}`}>
         <div class="p-5 sm:p-6 lg:p-8">
-          <div class={`w-11 h-11 ${member.color} mb-4`}></div>
+          <div class={`w-11 h-11 ${member.customColor ? "" : member.color} mb-4`} style={member.customColor ? { backgroundColor: member.customColor } : undefined}></div>
           <h3 class="text-lg sm:text-xl font-bold text-black">{member.name}</h3>
           <span class="text-sm text-black/60 font-google-sans mt-1 block">{member.role}</span>
           <p class="mt-3 text-gray-600 text-sm font-google-sans leading-relaxed whitespace-pre-line">{member.bio}</p>

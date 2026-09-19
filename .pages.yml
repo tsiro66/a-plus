@@ -87,6 +87,9 @@ content:
                   label: Πορτοκαλί
                 - name: green
                   label: Πράσινο
+          - name: colorHex
+            label: Προσαρμοσμένο χρώμα (hex, προαιρετικό — υπερισχύει της επιλογής)
+            type: string
           - name: name
             label: Όνομα
             type: string
