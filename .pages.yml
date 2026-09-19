@@ -70,25 +70,7 @@ content:
         list: true
         fields:
           - name: color
-            label: Χρώμα κάρτας
-            type: select
-            required: true
-            options:
-              values:
-                - name: forest
-                  label: Forest (πράσινο σκούρο)
-                - name: blue
-                  label: Μπλε
-                - name: pink
-                  label: Ροζ
-                - name: gray
-                  label: Γκρι
-                - name: orange
-                  label: Πορτοκαλί
-                - name: green
-                  label: Πράσινο
-          - name: colorHex
-            label: Προσαρμοσμένο χρώμα (hex, προαιρετικό — υπερισχύει της επιλογής)
+            label: Χρώμα
             type: string
           - name: name
             label: Όνομα
