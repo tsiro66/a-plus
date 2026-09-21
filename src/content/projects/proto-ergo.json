@@ -1,10 +1,10 @@
 {
-  "title": "Πρώτο Έργο",
+  "title": "ΠΟΛΥΚΑΤΟΙΚΙΑ ΕΠΙ ΤΗΣ ΟΔΟΥ ΒΕΝΙΖΕΛΟΥ - ΝΕΑ ΧΑΛΚΗΔΟΝΑ",
   "description": "test",
-  "dateStart": "2023-01-15",
-  "dateEnd": "2023-06-30",
-  "order": 1,
   "photos": [
-    "/src/assets/projects/Στιγμιότυπο οθόνης 2024-11-07 100629.png"
-  ]
+    "/src/assets/projects/chatgpt-image-jun-19-2026-125011-pm.png",
+    "/src/assets/projects/dd5ae30b-227e-46f3-bcd3-353201dc7e74.png"
+  ],
+  "dateStart": "2023-01-15",
+  "order": 1
 }
