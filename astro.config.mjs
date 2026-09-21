@@ -5,12 +5,13 @@ import { defineConfig, fontProviders } from 'astro/config';
 import cloudflare from '@astrojs/cloudflare';
 
 // https://astro.build/config
+const adapter = cloudflare({
+    imageService: 'compile',
+});
 export default defineConfig({
     site: 'https://a-plus.gr',
     session: false, // no sessions — avoids KV binding requirement on deploy
-    adapter: cloudflare({
-        imageService: 'compile',
-    }),
+    adapter,
     integrations: [sitemap()],
     env: {
         schema: {
