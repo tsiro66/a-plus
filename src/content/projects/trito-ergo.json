@@ -1,10 +1,9 @@
 {
-  "title": "Τρίτο Έργο",
-  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sodales scelerisque laoreet. Nam tempor, ipsum eu consectetur rhoncus, dui lacus blandit risus, non pharetra tortor libero vel enim. Vestibulum semper, tortor sit amet volutpat bibendum, elit velit hendrerit sem, at tempus felis velit id metus. Quisque nunc libero, elementum vel malesuada tristique, consequat ac erat. Mauris viverra sodales nisi in pretium. Nullam egestas facilisis quam quis accumsan. Quisque tincidunt lobortis elementum. Vivamus nec dapibus nisl, eu malesuada tellus. Maecenas et sapien dolor. Donec mi enim, malesuada et turpis iaculis, dictum iaculis tortor. Maecenas mauris lectus, suscipit vitae aliquet ac, rhoncus et leo. Mauris quis massa in metus iaculis molestie et nec nunc. Phasellus accumsan velit mattis est commodo semper. ",
-  "dateStart": "2023-08-10",
-  "dateEnd": "2024-01-20",
-  "order": 3,
+  "title": "Hills Villa / Σκορπονέρια / Βοιωτία",
+  "description": "Σκαλισμένο πάνω στον λόφο του Σκορπονερίου το συγκρότημα ...",
   "photos": [
-    "/src/assets/projects/trito-ergo/image.jpg"
-  ]
+    "/src/assets/projects/p04-v06c01nesuites.jpg"
+  ],
+  "dateStart": "2023-01-03",
+  "order": 3
 }
