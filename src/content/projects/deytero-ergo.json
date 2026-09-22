@@ -1,10 +1,13 @@
 {
-  "title": "Δεύτερο Έργο",
-  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sodales scelerisque laoreet. Nam tempor, ipsum eu consectetur rhoncus, dui lacus blandit risus, non pharetra tortor libero vel enim. Vestibulum semper, tortor sit amet volutpat bibendum, elit velit hendrerit sem, at tempus felis velit id metus. Quisque nunc libero, elementum vel malesuada tristique, consequat ac erat. Mauris viverra sodales nisi in pretium. Nullam egestas facilisis quam quis accumsan. Quisque tincidunt lobortis elementum. Vivamus nec dapibus nisl, eu malesuada tellus. Maecenas et sapien dolor. Donec mi enim, malesuada et turpis iaculis, dictum iaculis tortor. Maecenas mauris lectus, suscipit vitae aliquet ac, rhoncus et leo. Mauris quis massa in metus iaculis molestie et nec nunc. Phasellus accumsan velit mattis est commodo semper. ",
+  "title": "Ανακούς Πολυκατοικία / Νέα Φιλδελφεια / Αττική",
+  "description": "Το ιδιαίτερο αυτό κτίριο ξεχωρίζει ...",
+  "photos": [
+    "/src/assets/projects/v12-c001.jpg",
+    "/src/assets/projects/v12-c002.jpg",
+    "/src/assets/projects/v12-c004.jpg",
+    "/src/assets/projects/v12-c005.jpg"
+  ],
   "dateStart": "2023-04-01",
   "dateEnd": "2023-09-15",
-  "order": 2,
-  "photos": [
-    "/src/assets/projects/deytero-ergo/image.jpg"
-  ]
+  "order": 2
 }
