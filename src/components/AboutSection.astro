@@ -4,11 +4,26 @@ import about from '../content/pages/about.json';
 const FALLBACK_COLOR = "#333D1E"; // forest
 const HEX_RE = /^#(?:[0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/;
 
-const team = about.team.map((member, i) => ({
-  ...member,
-  color: typeof member.color === "string" && HEX_RE.test(member.color) ? member.color : FALLBACK_COLOR,
-  span: ["lg:col-span-3", "lg:col-span-2", "lg:col-span-2", "lg:col-span-3", "lg:col-span-5"][i % 5],
-}));
+// Card widths follow bio length so rows stay balanced as content changes:
+// one consistent 3-column grid where long bios span 2 columns and short ones take 1.
+// The longer a bio, the wider its card — so card heights within a row stay close.
+const WIDE_BIO = 700; // chars
+
+const team = about.team.map((member, i) => {
+  const wide = member.bio.length >= WIDE_BIO;
+  // on tablets the grid is 2 columns; an odd trailing card spans the full row there,
+  // and gets explicitly reset back to 1 column at the desktop breakpoint
+  const oddLast = i === about.team.length - 1 && about.team.length % 2 === 1;
+  return {
+    ...member,
+    color: typeof member.color === "string" && HEX_RE.test(member.color) ? member.color : FALLBACK_COLOR,
+    span: [
+      wide ? "lg:col-span-2" : "",
+      oddLast ? "sm:col-span-2" : "",
+      oddLast && !wide ? "lg:col-span-1" : "",
+    ].filter(Boolean).join(" "),
+  };
+});
 ---
 
 <section class="px-8 md:px-16 lg:px-24 py-16 sm:py-24">
@@ -28,11 +43,11 @@ const team = about.team.map((member, i) => ({
     </div>
   </div>
 
-  <!-- Team grid — asymmetric like hero cards -->
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+  <!-- Team grid — asymmetric like hero cards; widths adapt to bio length -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:grid-flow-dense gap-6">
     {team.map((member) => (
       <div class={`about-card bg-zinc-50 border border-forest/40 corner-extend ${member.span}`}>
-        <div class="p-5 sm:p-6 lg:p-8">
+        <div class="p-5 sm:p-6 lg:p-8 h-full">
           <div class="w-11 h-11 mb-4" style={{ backgroundColor: member.color }}></div>
           <h3 class="text-lg sm:text-xl font-bold text-black">{member.name}</h3>
           <span class="text-sm text-black/60 font-google-sans mt-1 block">{member.role}</span>
