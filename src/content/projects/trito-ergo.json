@@ -1,9 +1,13 @@
 {
   "title": "Hills Villa / Σκορπονέρια / Βοιωτία",
-  "description": "Σκαλισμένο πάνω στον λόφο του Σκορπονερίου το συγκρότημα ...",
+  "description": "Σκαλισμένο πάνω στον λόφο του Σκορπονερίου",
   "photos": [
-    "/src/assets/projects/p04-v06c01nesuites.jpg"
+    "/src/assets/projects/hillside-villa-under-soft-clouds.png",
+    "/src/assets/projects/viberimage2026-11-1119-12-57-367.jpg",
+    "/src/assets/projects/viberimage2026-11-1119-12-58-162.jpg",
+    "/src/assets/projects/viberimage2026-11-1119-12-56-169.jpg"
   ],
   "dateStart": "2023-01-03",
+  "dateEnd": "2026-11-11",
   "order": 3
 }
