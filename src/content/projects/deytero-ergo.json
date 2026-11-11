@@ -1,11 +1,9 @@
 {
   "title": "Ανακούς Πολυκατοικία / Νέα Φιλαδέλφεια / Αττική",
-  "description": "Το ιδιαίτερο αυτό κτίριο ξεχωρίζει ...",
+  "description": "κτίριο πολυκατοικίας",
   "photos": [
-    "/src/assets/projects/v12-c001.jpg",
-    "/src/assets/projects/v12-c002.jpg",
-    "/src/assets/projects/v12-c004.jpg",
-    "/src/assets/projects/v12-c005.jpg"
+    "/src/assets/projects/viberimage2026-10-2012-42-55-815.jpg",
+    "/src/assets/projects/viberimage2026-10-2012-42-56-033.jpg"
   ],
   "dateStart": "2023-04-01",
   "dateEnd": "2023-09-15",
