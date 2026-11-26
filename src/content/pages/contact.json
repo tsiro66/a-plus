@@ -1,6 +1,6 @@
 {
   "introTitle": "Επικοινωνία",
-  "introText": "Είμαστε στη διάθεσή σας για να συζητήσουμε το επόμενο έργο σας. Γράψτε μας και θα σας απαντήσουμε το συντομότερο δυνατό.",
+  "introText": "Είμαστε στη διάθεσή σας για να συζητήσουμε το επόμενο έργο σας.",
   "address": "Ακριτών 37, Νέα Ιωνία, ΤΚ 14234",
   "phone": "211 118 8928",
   "formTitle": "Στείλτε μας μήνυμα",
@@ -14,8 +14,14 @@
   "errorText": "Κάτι πήγε στραβά. Δοκιμάστε ξανά ή στείλτε μας email στο aplus.engineers@yahoo.com.",
   "socialTitle": "Ακολουθήστε μας",
   "social": [
-    { "platform": "facebook", "href": "#" },
-    { "platform": "instagram", "href": "#" },
-    { "platform": "linkedin", "href": "#" }
+    {
+      "platform": "facebook"
+    },
+    {
+      "platform": "instagram"
+    },
+    {
+      "platform": "linkedin"
+    }
   ]
 }
